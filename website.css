@@ -369,6 +369,7 @@ img.eren {
     height: 320px;
     filter: drop-shadow(3px 0 25px rgb(106, 96, 96)); 
     z-index: 1;
+    transition: all 0.3s;
 }
 img.luffy {
 
@@ -378,6 +379,7 @@ img.luffy {
     width:auto;
     height:383px;
     filter: drop-shadow(0 0 25px rgb(106, 96, 96));
+    transition: all 0.3s;
 }
 img.anim-logo {
     position: absolute;
@@ -441,3 +443,38 @@ img.arrow {
     top: 20px;
     
 }
+@keyframes animation-luffy {
+    from
+       {
+        transform:translateX(25px);
+       }
+       to {
+        transform:translateX(0);
+       }
+}
+
+.luffy {
+    animation-name:animation-luffy;
+    animation-timing-function:ease-in-out;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animation-eren {
+    from {
+        transform:translateX(-25px);
+    }
+    to {
+        transform:translateX(0);
+    }
+}
+
+.eren {
+    animation-name:animation-eren;
+    animation-timing-function:ease-in-out;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count:1;
+}
+
